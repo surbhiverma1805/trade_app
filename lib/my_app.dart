@@ -1,4 +1,4 @@
-import'package:trade_app/exports/exports.dart';
+import 'package:trade_app/exports/exports.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,16 +9,33 @@ class MyApp extends StatelessWidget {
     // Initialize the SizeConfig singleton
     SizeConfig.init(context);
 
-    return MaterialApp(
-      title: 'Trade App',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: AppColors.deepMidNightColor,
-        primaryColor: AppColors.primary,
+    return MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider(create: (context) => WatchlistServiceImpl()),
+        RepositoryProvider(
+          create: (context) =>
+              WatchlistRepository(context.read<WatchlistServiceImpl>()),
+        ),
+      ],
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) =>
+                WatchlistBloc(context.read<WatchlistRepository>()),
+          ),
+        ],
+        child: MaterialApp(
+          title: 'Trade App',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            brightness: Brightness.dark,
+            scaffoldBackgroundColor: AppColors.deepMidNightColor,
+            primaryColor: AppColors.primary,
+          ),
+          initialRoute: AppRoutes.initialRoute,
+          onGenerateRoute: AppRoutes.generateRoute,
+        ),
       ),
-      initialRoute: AppRoutes.initialRoute,
-      onGenerateRoute: AppRoutes.generateRoute,
     );
   }
 }

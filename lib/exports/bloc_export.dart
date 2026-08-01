@@ -1,0 +1,1 @@
+export 'package:trade_app/presentation/bloc/watchlist_bloc/watchlist_bloc.dart';

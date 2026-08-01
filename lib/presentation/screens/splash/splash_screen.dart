@@ -11,13 +11,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Simulate initialization delay (loading local storage, restoring watchlists/wallet)
+    // Simulate initialization delay
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => const MainNavScreen()),
-      // );
+      Navigator.of(context).pushReplacementNamed(AppRoutes.watchlist);
     });
   }
 
@@ -60,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   color: AppColors.whiteColor,
                 ),
               ),
-             8.toSpace(),
+              8.toSpace(),
 
               // Subtitle
               Text(
@@ -74,14 +71,7 @@ class _SplashScreenState extends State<SplashScreen> {
               48.toSpace(),
 
               // Loading Indicator
-              SizedBox(
-                width: 28.w,
-                height: 28.w,
-                child: CircularProgressIndicator(
-                  strokeWidth: 2.5,
-                  valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
-                ),
-              ),
+              Loader(),
 
               10.toSpace(),
               // Footer Version Info
@@ -89,7 +79,10 @@ class _SplashScreenState extends State<SplashScreen> {
                 padding: EdgeInsets.only(bottom: 24.w),
                 child: Text(
                   AppStrings.version,
-                  style: TextStyle(fontSize: 12.sp, color: AppColors.slateGreyColor),
+                  style: TextStyle(
+                    fontSize: 12.sp,
+                    color: AppColors.slateGreyColor,
+                  ),
                 ),
               ),
             ],

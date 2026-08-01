@@ -1,3 +1,11 @@
 export 'package:trade_app/main.dart';
 export 'package:trade_app/my_app.dart';
 export 'package:trade_app/presentation/screens/splash/splash_screen.dart';
+export 'package:trade_app/presentation/screens/watchlist/watchlist_screen.dart';
+export 'package:trade_app/presentation/screens/watchlist/widget/no_stocks_view.dart';
+export 'package:trade_app/presentation/screens/watchlist/widget/stock_item.dart';
+export 'package:trade_app/presentation/screens/watchlist/widget/watchlist_item.dart';
+export 'package:trade_app/presentation/screens/watchlist/widget/dialog/show_add_stock_dialog.dart';
+export 'package:trade_app/presentation/screens/watchlist/widget/dialog/show_create_dialog.dart';
+export 'package:trade_app/presentation/screens/watchlist/widget/dialog/show_delete_confirmation.dart';
+export 'package:trade_app/presentation/screens/watchlist/widget/dialog/show_rename_dialog.dart';
