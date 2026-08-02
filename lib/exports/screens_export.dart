@@ -9,3 +9,6 @@ export 'package:trade_app/presentation/screens/watchlist/widget/dialog/show_add_
 export 'package:trade_app/presentation/screens/watchlist/widget/dialog/show_create_dialog.dart';
 export 'package:trade_app/presentation/screens/watchlist/widget/dialog/show_delete_confirmation.dart';
 export 'package:trade_app/presentation/screens/watchlist/widget/dialog/show_rename_dialog.dart';
+export 'package:trade_app/presentation/screens/market_overview/market_overview_screen.dart';
+export 'package:trade_app/presentation/screens/market_overview/widget/market_ticker_tile.dart';
+export 'package:trade_app/presentation/screens/dashboard_screen/dashboard_screen.dart';

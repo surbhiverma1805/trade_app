@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // Simulate initialization delay
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
-      Navigator.of(context).pushReplacementNamed(AppRoutes.watchlist);
+      Navigator.of(context).pushReplacementNamed(AppRoutes.dashboard);
     });
   }
 

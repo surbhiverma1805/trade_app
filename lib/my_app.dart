@@ -16,6 +16,11 @@ class MyApp extends StatelessWidget {
           create: (context) =>
               WatchlistRepository(context.read<WatchlistServiceImpl>()),
         ),
+        RepositoryProvider(create: (context) => MarketServiceImpl()),
+        RepositoryProvider(
+          create: (context) =>
+              MarketRepository(context.read<MarketServiceImpl>()),
+        ),
       ],
       child: MultiBlocProvider(
         providers: [

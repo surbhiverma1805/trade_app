@@ -28,4 +28,8 @@ class AppStrings {
   static const String enterNewName = "Enter new name";
   static const String added = "Added";
   static const String addStocksToWatchlist = "Add Stocks to Watchlist";
+
+  /// Market Overview
+  static const String markets = "Markets";
+  static const String marketOverview = "Market Overview";
 }
