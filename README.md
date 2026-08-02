@@ -65,3 +65,11 @@ flutter run
 
 A short walkthrough video demonstrating all features end-to-end has been attached to the final
 submission.
+
+---
+
+## 👨‍💻 Author / Developer
+
+* **Name:** [Your Full Name]
+* **Role:** Flutter Developer
+* **GitHub:** [@yourusername](https://github.com/yourusername)
