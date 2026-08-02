@@ -40,7 +40,7 @@ Ensure you have the Flutter SDK installed on your machine (stable channel recomm
 1. **Clone the Repository:**
 
 ```bash
-git clone <your-public-github-repo-url>
+git clone <https://github.com/surbhiverma1805/trade_app.git>
 cd trade_app
 
 ```
@@ -70,6 +70,6 @@ submission.
 
 ## 👨‍💻 Author / Developer
 
-* **Name:** [Your Full Name]
+* **Name:** Surbhi Verma
 * **Role:** Flutter Developer
-* **GitHub:** [@yourusername](https://github.com/yourusername)
+* **GitHub:** [@surbhiverma1805](https://github.com/surbhiverma1805/trade_app)
