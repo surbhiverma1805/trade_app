@@ -13,4 +13,5 @@ export 'package:trade_app/presentation/screens/market_overview/market_overview_s
 export 'package:trade_app/presentation/screens/market_overview/widget/market_ticker_tile.dart';
 export 'package:trade_app/presentation/screens/dashboard_screen/dashboard_screen.dart';
 export 'package:trade_app/presentation/screens/trading/buy_sell_ticket_screen.dart';
-export 'package:trade_app/presentation/screens/trading/portfolio_screen.dart';
+export 'package:trade_app/presentation/screens/portfolio/portfolio_screen.dart';
+export 'package:trade_app/presentation/screens/portfolio/widget/holding_view.dart';

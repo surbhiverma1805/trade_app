@@ -1,7 +1,7 @@
 class HoldingModel {
   final String symbol;
-  int quantity;
-  double averagePrice;
+  final int quantity;
+  final double averagePrice;
 
   HoldingModel({
     required this.symbol,

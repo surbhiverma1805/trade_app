@@ -5,11 +5,14 @@ export 'package:trade_app/data/service/market_service/market_service.dart';
 export 'package:trade_app/data/service/market_service/market_service_impl.dart';
 export 'package:trade_app/data/service/trading_service/trading_service.dart';
 export 'package:trade_app/data/service/trading_service/trading_service_impl.dart';
+export 'package:trade_app/data/service/portfolio_service/portfolio_service.dart';
+export 'package:trade_app/data/service/portfolio_service/portfolio_service_impl.dart';
 
 // Repositories
 export 'package:trade_app/data/repositories/watchlist_repository.dart';
 export 'package:trade_app/data/repositories/market_repository.dart';
 export 'package:trade_app/data/repositories/trading_repository.dart';
+export 'package:trade_app/data/repositories/portfolio_repository.dart';
 
 // Shared Pref
 export 'package:trade_app/data/local_storage/shared_pre.dart';

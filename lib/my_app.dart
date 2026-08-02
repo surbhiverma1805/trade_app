@@ -26,6 +26,11 @@ class MyApp extends StatelessWidget {
           create: (context) =>
               TradingRepository(context.read<TradingServiceImpl>()),
         ),
+        RepositoryProvider(create: (context) => PortfolioServiceImpl()),
+        RepositoryProvider(
+          create: (context) =>
+              PortfolioRepository(context.read<PortfolioServiceImpl>()),
+        ),
       ],
       child: MultiBlocProvider(
         providers: [
@@ -39,9 +44,13 @@ class MyApp extends StatelessWidget {
           BlocProvider(
             create: (context) => TradingBloc(context.read<TradingRepository>()),
           ),
+          BlocProvider(
+            create: (context) =>
+                PortfolioBloc(context.read<PortfolioRepository>()),
+          ),
         ],
         child: MaterialApp(
-          title: 'Trade App',
+          title: AppStrings.appName,
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             brightness: Brightness.dark,

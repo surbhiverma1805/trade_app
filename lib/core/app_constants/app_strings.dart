@@ -62,4 +62,13 @@ class AppStrings {
       "No holdings yet. Buy stocks from your watchlist!";
   static const String qty = "Qty";
   static const String avg = "Avg";
+
+  /// Portfolio
+  static const String sortPnlHighToLow = "Sort: P&L (High to Low)";
+  static const String sortPnlLowToHigh = "Sort: P&L (Low to High)";
+  static const String sortSymbol = "Sort: Symbol";
+  static const String sortCurrentValue = "Sort: Current Value";
+  static const String totalPnl = "Total P&L";
+  static const String invested = "Invested";
+  static const String currentValue = "Current Value";
 }
