@@ -1,5 +1,4 @@
 import 'package:trade_app/exports/exports.dart';
-import 'package:trade_app/presentation/widgets/app_button.dart';
 
 class NoStocksView extends StatelessWidget {
   const NoStocksView({super.key, required this.onPressed});

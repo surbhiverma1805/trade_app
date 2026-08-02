@@ -21,12 +21,23 @@ class MyApp extends StatelessWidget {
           create: (context) =>
               MarketRepository(context.read<MarketServiceImpl>()),
         ),
+        RepositoryProvider(create: (context) => TradingServiceImpl()),
+        RepositoryProvider(
+          create: (context) =>
+              TradingRepository(context.read<TradingServiceImpl>()),
+        ),
       ],
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
             create: (context) =>
                 WatchlistBloc(context.read<WatchlistRepository>()),
+          ),
+          BlocProvider(
+            create: (context) => MarketBloc(context.read<MarketRepository>()),
+          ),
+          BlocProvider(
+            create: (context) => TradingBloc(context.read<TradingRepository>()),
           ),
         ],
         child: MaterialApp(

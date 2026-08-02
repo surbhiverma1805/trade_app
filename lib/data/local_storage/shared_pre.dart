@@ -5,7 +5,10 @@ import 'package:trade_app/exports/exports.dart';
 /// It will contain all the methods of SharedPreferences with keys used to access
 /// data stored in SharedPreferences
 class SharedPre {
-  static const String storageKey = 'saved_watchlists';
+  static const String storageKey = 'saved_watchlist';
+  static const String balanceKey = 'wallet_balance';
+  static const String holdingsKey = 'user_holdings';
+  static const String ordersKey = 'user_orders';
 
   static Future<bool> setBool(String key, bool value) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -17,12 +20,25 @@ class SharedPre {
     return await prefs.setString(key, value);
   }
 
+  static Future<bool> setDouble(String key, double value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return await prefs.setDouble(key, value);
+  }
+
   static Future<bool> getBoolValue(
     String key, {
     bool defaultValue = false,
   }) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.getBool(key) ?? defaultValue;
+  }
+
+  static Future<double> getDoubleValue(
+    String key, {
+    double defaultValue = 0.0,
+  }) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getDouble(key) ?? defaultValue;
   }
 
   static Future<String> getStringValue(

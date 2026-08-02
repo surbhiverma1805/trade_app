@@ -91,7 +91,15 @@ class StockItem extends StatelessWidget {
           ],
         ),
         onTap: () {
-          // TODO: Open Buy/Sell Ticket pre-filled with this stock
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            backgroundColor: Colors.transparent,
+            builder: (context) => BuySellTicketScreen(
+              symbol: symbol,
+              initialType: OrderType.buy, // or sell
+            ),
+          );
         },
       ),
     );

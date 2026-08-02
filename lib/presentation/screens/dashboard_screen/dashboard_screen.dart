@@ -14,6 +14,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   final List<Widget> _screens = [
     const WatchlistScreen(), // Feature 1: Watchlists
     const MarketOverviewScreen(), // Feature 2: Live Prices Mimic
+    const PortfolioScreen(), // Feature 3: Portfolio of sell/buy
   ];
 
   @override
@@ -32,7 +33,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ),
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
-          onTap: (index) => setState(() => _currentIndex = index),
+          onTap: (index) {
+            setState(() => _currentIndex = index);
+
+            // If the user taps the Portfolio tab (index 2), force a fresh reload
+            if (index == 2) {
+              context.read<TradingBloc>().add(LoadTradingAccountEvent());
+            }
+          },
           type: BottomNavigationBarType.fixed,
           backgroundColor: AppColors.whiteColor,
           selectedItemColor: AppColors.primary,
@@ -53,6 +61,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.show_chart_rounded),
               label: AppStrings.markets,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.pie_chart_outline_rounded),
+              label: AppStrings.portfolio,
             ),
           ],
         ),
